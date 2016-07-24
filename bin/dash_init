@@ -14,7 +14,7 @@ if [ ! -e "$HOME/.dash/dash.conf" ]; then
 disablewallet=${DISABLEWALLET:-1}
 printtoconsole=${PRINTTOCONSOLE:-1}
 rpcuser=${RPCUSER:-dashrpc}
-rpcpassword=${RPCPASSWORD:-dd if=/dev/urandom bs=33 count=1 status=none | base64}
+rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
 EOF
 
 fi
