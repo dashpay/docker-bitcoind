@@ -4,7 +4,6 @@ Dashd for Docker
 [![Docker Stats](http://dockeri.co/image/dashpay/dashd)](https://hub.docker.com/r/dashpay/dashd/)
 
 [![Build Status](https://travis-ci.org/dashpay/docker-dashd.svg?branch=master)](https://travis-ci.org/dashpay/docker-dashd/)
-[![ImageLayers](https://imagelayers.io/badge/dashpay/dashd:latest.svg)](https://hub.docker.com/r/dashpay/dashd/)
 
 
 Docker image that runs the Dash dashd node in a container for easy deployment.
@@ -43,7 +42,7 @@ Quick Start
 
         $ docker ps
         CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS              PORTS                                              NAMES
-        d0e1076b2dca        dashpay/dashd:latest     "dash_oneshot"       2 seconds ago       Up 1 seconds        127.0.0.1:9998->9998/tcp, 0.0.0.0:9999->9999/tcp   dashd-node
+        d0e1076b2dca        dashpay/dashd:latest          "dash_oneshot"      2 seconds ago       Up 1 seconds        127.0.0.1:9998->9998/tcp, 0.0.0.0:9999->9999/tcp   dashd-node
 
 3. You can then access the daemon's output thanks to the [docker logs command]( https://docs.docker.com/reference/commandline/cli/#logs)
 
@@ -56,3 +55,10 @@ Documentation
 -------------
 
 * Additional documentation in the [docs folder](docs).
+
+Credits
+-------
+
+Original work by Kyle Manna [https://github.com/kylemanna/docker-bitcoind](https://github.com/kylemanna/docker-bitcoind).
+Modified to use Dash Core instead of Bitcoin Core.
+
